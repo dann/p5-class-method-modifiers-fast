@@ -1,0 +1,50 @@
+
+BEFORE
+Benchmark: running ClassMethodModifiers, ClassMethodModifiersFast, Moose for at least 5 CPU seconds...
+ClassMethodModifiers: 5.55378 wallclock secs ( 5.37 usr +  0.00 sys =  5.37 CPU) @ 382244.69/s (n=2052654)
+ClassMethodModifiersFast: 5.19569 wallclock secs ( 5.15 usr +  0.00 sys =  5.15 CPU) @ 721696.50/s (n=3716737)
+     Moose: 5.37193 wallclock secs ( 5.35 usr +  0.00 sys =  5.35 CPU) @ 289563.74/s (n=1549166)
+                             Rate Moose ClassMethodModifiers ClassMethodModifiersFast
+Moose                    289564/s    --                 -24%                     -60%
+ClassMethodModifiers     382245/s   32%                   --                     -47%
+ClassMethodModifiersFast 721697/s  149%                  89%                       --
+
+AFTER
+Benchmark: running ClassMethodModifiers, ClassMethodModifiersFast, Moose for at least 5 CPU seconds...
+ClassMethodModifiers: 5.42181 wallclock secs ( 5.29 usr +  0.00 sys =  5.29 CPU) @ 273605.67/s (n=1447374)
+ClassMethodModifiersFast: 5.434 wallclock secs ( 5.36 usr + -0.01 sys =  5.35 CPU) @ 721437.01/s (n=3859688)
+     Moose: 5.48908 wallclock secs ( 5.45 usr +  0.00 sys =  5.45 CPU) @ 276198.17/s (n=1505280)
+                             Rate ClassMethodModifiers Moose ClassMethodModifiersFast
+ClassMethodModifiers     273606/s                   --   -1%                     -62%
+Moose                    276198/s                   1%    --                     -62%
+ClassMethodModifiersFast 721437/s                 164%  161%                       --
+
+AROUND
+Benchmark: running ClassMethodModifiers, ClassMethodModifiersFast, Moose for at least 5 CPU seconds...
+ClassMethodModifiers: 5.4439 wallclock secs ( 5.52 usr +  0.00 sys =  5.52 CPU) @ 377432.25/s (n=2083426)
+ClassMethodModifiersFast: 5.15217 wallclock secs ( 5.12 usr +  0.00 sys =  5.12 CPU) @ 393749.80/s (n=2015999)
+     Moose: 5.97819 wallclock secs ( 5.90 usr +  0.00 sys =  5.90 CPU) @ 305241.86/s (n=1800927)
+                             Rate Moose ClassMethodModifiers ClassMethodModifiersFast
+Moose                    305242/s    --                 -19%                     -22%
+ClassMethodModifiers     377432/s   24%                   --                      -4%
+ClassMethodModifiersFast 393750/s   29%                   4%                       --
+
+ALL THREE
+Benchmark: running ClassMethodModifiers, ClassMethodModifiersFast, Moose for at least 5 CPU seconds...
+ClassMethodModifiers: 5.08047 wallclock secs ( 5.00 usr +  0.00 sys =  5.00 CPU) @ 136121.20/s (n=680606)
+ClassMethodModifiersFast: 5.57851 wallclock secs ( 5.45 usr + -0.01 sys =  5.44 CPU) @ 264608.82/s (n=1439472)
+     Moose: 5.27847 wallclock secs ( 5.28 usr +  0.00 sys =  5.28 CPU) @ 131580.11/s (n=694743)
+                             Rate Moose ClassMethodModifiers ClassMethodModifiersFast
+Moose                    131580/s    --                  -3%                     -50%
+ClassMethodModifiers     136121/s    3%                   --                     -49%
+ClassMethodModifiersFast 264609/s  101%                  94%                       --
+
+INSTALL AROUND
+Benchmark: running ClassMethodModifiers, ClassMethodModifiersFast, Moose for at least 5 CPU seconds...
+ClassMethodModifiers: 5.3693 wallclock secs ( 1.81 usr +  3.33 sys =  5.14 CPU) @ 50794.75/s (n=261085)
+ClassMethodModifiersFast: 6.12176 wallclock secs ( 1.57 usr +  4.30 sys =  5.87 CPU) @ 45358.43/s (n=266254)
+     Moose: 21.7701 wallclock secs (21.19 usr +  0.29 sys = 21.48 CPU) @ 86.87/s (n=1866)
+                            Rate  Moose ClassMethodModifiersFast ClassMethodModifiers
+Moose                     86.9/s     --                    -100%                -100%
+ClassMethodModifiersFast 45358/s 52113%                       --                 -11%
+ClassMethodModifiers     50795/s 58371%                      12%                   --
