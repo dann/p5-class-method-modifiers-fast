@@ -28,7 +28,7 @@ sub _install_modifier {
             unless ($method) {
                 $method = $into->can($name)
                     or confess
-                    "The method '$name' isn't found in the inheritance hierarchy for the class $into";
+                    "The method '$name' is not found in the inheritance hierarchy for class $into";
             }
             $method = Data::Util::modify_subroutine( $method,
                 $type => [$modifier] );
