@@ -2,7 +2,7 @@ package Class::Method::Modifiers::Fast;
 use strict;
 use warnings;
 use Data::Util;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use base 'Exporter';
 our @EXPORT      = qw(before after around);
