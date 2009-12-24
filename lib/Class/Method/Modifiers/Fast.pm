@@ -153,6 +153,7 @@ You can use C<around> to:
 =head1 AUTHOR
 
 Takatoshi Kitano E<lt>kitano.tk@gmail.comE<gt>
+gfx
 
 =head1 SEE ALSO
 
